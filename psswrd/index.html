@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSSWRD MKR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Ranchers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="hdr">PSSWRD MKR</h1>
+    </header>
+    <div class="options">
+        <span>
+            <label for="len">4 - &#8734;</label>
+            <input type="text" name="len" id="len" required />
+        </span>
+        <span>
+            <label id="label" for="upps">ABC</label>
+            <input type="checkbox" name="upps" id="upps" checked>
+        </span>
+        <span>
+            <label id="label" for="lows">abc</label>
+            <input type="checkbox" name="lows" id="lows">
+        </span>
+        <span>
+            <label id="label" for="nums">123</label>
+            <input type="checkbox" name="nums" id="nums">
+        </span>
+        <span>
+            <label id="label" for="specs">!@£</label>
+            <input type="checkbox" name="specs" id="specs"> 
+        </span> 
+        <span>
+            <input type="button" name="DRKMD" class="DRKMD" value='🌝'> 
+        </span> 
+    </div>
+    <input type="button" value="MK PSSWRD" id="buts" onclick="checker()">
+    <hr>
+    <div class="wanker">
+        <div id="genPsswrd">
+            <h1 id="psswrdShw"></h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
