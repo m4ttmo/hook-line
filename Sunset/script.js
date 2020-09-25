@@ -18,16 +18,13 @@ window.onload = function getLocation() {
 function logPosition(position) {
     lat = position.coords.latitude
     lng = position.coords.longitude; 
-    console.log(lat + " " + lng);
     sunSetTime();
     
 }
 function sunSetTime() {
     fetch('https://api.sunrise-sunset.org/json?lat='+ lat + '&lng=' + lng).then(response => response.json())
     .then(data => {
-        console.log(data)
         x = data.results.sunset;
-        console.log(x);
         difCal();
     }).catch((err) => console.log(err));
 }
@@ -56,7 +53,7 @@ var timer = setInterval(function display() {
     var newDate = new Date(todayDateTime.getTime() + (timeDifference * 60000));
 
 
-    
+
     diffTime = parsedDateTime - newDate;
     
     if (diffTime <= 0) {
