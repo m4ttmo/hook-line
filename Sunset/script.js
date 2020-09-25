@@ -56,6 +56,7 @@ var timer = setInterval(function display() {
     var newDate = new Date(todayDateTime.getTime() + (timeDifference * 60000));
 
 
+    
     diffTime = parsedDateTime - newDate;
     
     if (diffTime <= 0) {
