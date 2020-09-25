@@ -51,11 +51,13 @@ var timer = setInterval(function display() {
     var today = new Date().toString().split(" ").slice(0, 4).join(" ");
     var parsedDate = new Date(today + " " + x);
     var parsedDateTime = parsedDate.getTime();
-    var todayDateTime = new Date().getTime();
+    var todayDateTime = new Date();
+    var timeDifference = todayDateTime.getTimezoneOffset();
+    var newDate = new Date(todayDateTime.getTime() + (timeDifference * 60000));
 
-    diffTime = parsedDateTime - todayDateTime;
 
-    console.log(diffTime);
+    diffTime = parsedDateTime - newDate;
+    
     if (diffTime <= 0) {
         
         timeNotice.innerHTML = "Sun has set, check back tomorrow"
