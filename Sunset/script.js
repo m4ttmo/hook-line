@@ -7,7 +7,7 @@ var timeNotice = document.getElementById("time");
 var sunOffset = 0;
 var diffTime;
 
-window.onload = function getLocation() {
+window.onload = function getLocation() { 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(logPosition);
     } else {
@@ -52,9 +52,9 @@ var timer = setInterval(function display() {
     var timeDifference = todayDateTime.getTimezoneOffset();
     var newDate = new Date(todayDateTime.getTime() + (timeDifference * 60000));
 
-
-
     diffTime = parsedDateTime - newDate;
+    var horizonLines = window.innerHeight / (24 * 60);
+
     
     if (diffTime <= 0) {
         
@@ -69,6 +69,6 @@ var timer = setInterval(function display() {
         var minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((diffTime % (1000 * 60)) / 1000);
         timeNotice.innerHTML = hours + "h " + minutes + "m " + seconds + "s";
-        document.getElementById("sun").style.top = sunOffset +"px";
+        document.getElementById("sun").style.transform = `translateY(${(horizonLines * diffTime / (1000 * 60)) * -1}px)`;
     }
 }, 1000)
