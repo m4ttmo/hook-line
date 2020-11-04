@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Atxt Builder</title>
+        <link rel="stylesheet" type="text/css" href="ATstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="options.png" alt="Puzzle Icon">
+                <h2>ATxT Builder</h2>
+            </header>
+            
+            <form id="frm1" onsubmit="event.preventDefault()"> <!--onchange="submitForm()" -->
+                Film name<em>*</em> <input type="text" id="FilmId" required><br>
+                Content Type<em>*</em> <!--<input type="text" id="ContId" required><br>-->
+                <select name="CntType" id="ContId"  required="required">
+                    <option value="" selected disabled></option>
+                    <option value="FTR">Feature</option>
+                    <option value="TRL">Trailer</option>
+                    <option value="RTG-F">Rating Feature</option>
+                    <option value="RTG-T">Rating Trailer</option>
+                    <option value="SHR">Short</option>
+                    <option value="XSN">Transitional</option>
+                </select><br>
+                Content Type Modifier<input type="text" id="TypeModId"><br>
+                Aspect Ratio<em>*</em> 
+                <select name="CntType" id="AspectId" required="required">
+                    <option value="" selected disabled></option>
+                    <option value="F">Flat</option>
+                    <option value="S">Scope</option>
+                    <option value="C">Full Container</option>
+                </select><br>
+                    <!--<input type="radio" name="Aspect" id="AspectId" required value="_S"> Scope<br>
+                    <input type="radio" name="Aspect" id="AspectId" value="_F"> Flat<br>
+                    <input type="radio" name="Aspect" id="AspectId" value="_C"> Full Container <br><br>-->
+                Aspect Modifier <input type="text" id="AspectModId"><br>
+                Spoken Language<em>*</em> <input type="text" id="DLangId" required><br>
+                Subtitle Language<em>*</em> <input type="text" id="SLangId"><br>
+                Second Subtitle Language <input type="text" id="S2LangId"><br>
+                Release Territory<em>*</em> <input type="text" id="TetId" required><br>
+                Territory Modifier <input type="text" id="TetModId"><br>
+                Audio Type<em>*</em>  <br>
+                <input type="checkbox" name="AudioModifier" value="51" class="AudioModId">5.1
+                <input type="checkbox" name="AudioModifier" value="71" class="AudioModId">7.1
+                <input type="checkbox" name="AudioModifier" value="20" class="AudioModId">Stereo
+                <input type="checkbox" name="AudioModifier" value="10" class="AudioModId">Mono<br>
+                <input type="checkbox" name="AudioModifier" value="MOS" class="AudioModId">Mute 
+                <input type="checkbox" name="AudioModifier" value="HI" class="AudioModId">Hearing Impaired
+                <input type="checkbox" name="AudioModifier" value="VI" class="AudioModId">Visually Impaired
+                <input type="checkbox" name="AudioModifier" value="SL" class="AudioModId">Libras<br>
+                <input type="checkbox" name="AudioModifier" value="Atmos" class="AudioModId">Atmos
+                <input type="checkbox" name="AudioModifier" value="Auro" class="AudioModId">Auro
+                <input type="checkbox" name="AudioModifier" value="DTSX" class="AudioModId">DTSX
+                <input type="checkbox" name="AudioModifier" value="Dbox" class="AudioModId">Dbox
+                <br>
+                Resolution<em>*</em> <input type="text" id="ResId" required><br>
+                Studio Code<em>*</em> <input type="text" id="StudioId" required><br>
+                Mastering Date<em>*</em> <input type="text" id="DateId" required><br>
+                Mastering Facility<em>*</em> <input type="text" id="FacilityId" required><br>
+                DCP Standard<em>*</em> <input type="text" id="StandardId" required><br>
+                Package Type<em>*</em> <input type="text" id="PackTypeId" required><br><br>
+                    <input type="submit" onclick="validateForm()" value="Submit" class="butSub"> 
+                    <input type="button" onClick="location.href=location.href" value="Reset" class="butSub">
+             </form>
+            
+            <div class="FinalBox">
+                    <h1 id="FinalAtxt"></h1>
+            </div>
+            
+            <script src="atxtScript.js"></script>
+        </div>
+    </body>
+</html>
