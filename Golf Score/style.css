@@ -1,0 +1,82 @@
+html,
+body {
+  height: 1vh;
+  width: 100%;
+  background-color: #2bc650;
+}
+header {
+  width: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.scoreSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 70vh;
+}
+h1 {
+  font-family: "Carter One", cursive;
+  color: #fff;
+  font-size: 200px;
+}
+#h1But {
+  font-family: "Carter One", cursive;
+  color: #ecd65d;
+  font-size: 200px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+#score {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+h3 {
+  color: #ecd65d;
+  font-family: "Carter One", cursive;
+  font-size: 46px;
+  display: inline;
+}
+h2 {
+  color: #fff;
+  font-family: "Carter One", cursive;
+  font-size: 66px;
+  display: inline;
+}
+.bck {
+  margin-right: 100px;
+}
+.fwd {
+  margin-left: 100px;
+}
+.Hols {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#holBut,
+#holButR {
+  display: block;
+  font-family: "Carter One", cursive;
+  color: #fff;
+  font-size: 24px;
+  background-color: #ecd65d;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hole {
+  width: auto;
+  text-align: center;
+}
