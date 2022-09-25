@@ -75,7 +75,7 @@ function CompareWrds() {
         loadDic();
         break itteration;
       case "L":
-        fileSelect = "/L.csv";
+        fileSelect = "L.csv";
         loadDic();
         break itteration;
       case "M":
