@@ -13,7 +13,7 @@ const readFile = () => {
   reader.readAsBinaryString(fileInput.files[0]);
   reader.onload = () => {
     var readFile = reader.result;
-    loadedTxt = readFile.split(" ");
+    loadedTxt = readFile.split(/[\s,]+/);
     CompareWrds();
   };
 };
