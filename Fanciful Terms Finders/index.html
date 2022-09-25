@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>FancyFindr</title>
+</head>
+<body>
+    <div>
+        <p>Select File:</p>
+        <input id="txt" type="file" accept=".txt, .rtf, .pdf, .doc, .csv">
+        <button onClick="window.location.reload();">Refresh Page</button>
+
+      </div>
+      <pre id="out"><p>Terms will appear here</p></pre>
+      <progress id="progBar" value="" max="100" hidden> </progress>
+      <ul id="termsList" hidden></ul>
+    <script src="script.js"></script>
+    
+</body>
+</html>
