@@ -19,7 +19,7 @@ var budget = 1000000;
 window.onload = function FilmLoad() {
   for (let i = 0; i <= MovID.length; i++) {
     console.log(i);
-    fetch("http://www.omdbapi.com/?i=" + MovID[i] + "&apikey=991caacb")
+    fetch("https://www.omdbapi.com/?i=" + MovID[i] + "&apikey=991caacb")
       .then((response) => response.json())
       .then((data) => {
         x = data.Title;
