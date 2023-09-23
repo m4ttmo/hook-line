@@ -1,0 +1,68 @@
+html,body{
+    width: 100%;
+    height: 100%;
+   
+}
+.wrapper{
+   height: 100%;
+   width: 100%;
+}
+header{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+.screen{
+    height: 419px;
+    width: 1000px;
+    background-color: #000;
+    color: #fff;
+    margin:0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+.homePageTextTitle{
+    font-size: 36px;
+}
+.homePageText1{
+    font-size: 20px;
+}
+.homePageText1:nth-child(4) {
+    font-size: 24px;
+}
+#scrollText {
+  height: 100%;
+  text-align: center;
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: my-animation 13s linear infinite;
+    -webkit-animation: my-animation 13s linear infinite;
+    animation: my-animation 13s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateY(100%); }
+    to { -moz-transform: translateY(-200%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(-200%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    to {
+      -moz-transform: translateY(-200%);
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cinemastyle.css">
+    <title>Cinema Tycoon</title>
+</head>
+<body>
+    
+    <div class="wrapper" id="loader">
+        <header>
+            <h1>Cinema Tycoon</h1>
+            <h3>The online fantasy cinema league</h3>
+            <h5><a href="">How it works</a></h5>
+        </header>
+
+        <h4>WEEKLY MOVIES</h4>
+        <section class="WeeklyMovies">
+            <div class="movieOption" onclick="MovieModal('0')"><img id="img0"></div>
+            <div class="movieOption" onclick="MovieModal('1')"><img id="img1"></div>
+            <div class="movieOption" onclick="MovieModal('2')"><img id="img2"></div>
+            <div class="movieOption" onclick="MovieModal('3')"><img id="img3"></div>
+            <div class="movieOption" onclick="MovieModal('4')"><img id="img4"></div>
+        </section>
+        <div id="MovieInfoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <span class="infoCard">
+                    <div id="synop"></div>
+                    <div id="poster"><img id="Posterimg"></div>
+                    <div id="cast"></div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="CHscript.js"></script>
+</body>
+</html>
