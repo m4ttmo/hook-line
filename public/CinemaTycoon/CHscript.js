@@ -1,4 +1,5 @@
 var modal = document.getElementById("MovieInfoModal");
+var screenMod = document.getElementById("ScreenSetModal");
 var btn = document.getElementsByClassName("movieOption");
 var span = document.getElementsByClassName("close")[0];
 var MovID = [
@@ -9,9 +10,11 @@ var MovID = [
   "tt3291150",
 ];
 var Mov = [];
-//var synop = document.getElementsByClassName("synop");
-//var poster = document.getElementsByClassName("Poster");
-//var cast = document.getElementsByClassName("cast");
+//var titleOpt = [];
+var scrNum;
+var scrOpt = [];
+var MyCinLineUp = [];
+var budget = 1000000;
 
 window.onload = function FilmLoad() {
   for (let i = 0; i <= MovID.length; i++) {
@@ -24,8 +27,6 @@ window.onload = function FilmLoad() {
           console.log("No movies were found - try again");
         } else {
           Mov[i] = data;
-          //document.getElementById("root").innerHTML = x;
-          //document.querySelector("p").innerHTML = data.Plot;
           document.getElementById("img" + i).src = data.Poster;
         }
       })
@@ -43,12 +44,40 @@ function MovieModal(i) {
   document.getElementById("synop").innerHTML = synop;
   document.getElementById("cast").innerHTML = cast;
 }
+function PickScreen(x) {
+  screenMod.style.display = "block";
+  movieSelect(x);
+}
 span.onclick = function () {
   modal.style.display = "none";
+  //screenMod.style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == screenMod) {
     modal.style.display = "none";
+    screenMod.style.display = "none";
   }
 };
+
+var select = document.getElementById("selectNumber");
+
+function movieSelect(x) {
+  select.innerHTML = "";
+  for (var i = 0; i < Mov.length; i++) {
+    //titleOpt[i] = Mov[i];
+    select.innerHTML +=
+      "<option value=" + Mov[i].imdbID + ">" + Mov[i].Title + "</option>";
+  }
+  scrNum = x;
+}
+function scrPick() {
+  scrOpt[scrNum] = select.value;
+  var index = Mov.map(function (e) {
+    return e.imdbID;
+  }).indexOf(scrOpt[scrNum]);
+  let poster = Mov[index].Poster;
+  document.getElementById("Scimg" + scrNum).src = poster;
+  screenMod.style.display = "none";
+  console.log(scrOpt);
+}

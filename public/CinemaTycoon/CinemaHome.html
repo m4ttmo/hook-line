@@ -33,6 +33,30 @@
                 </span>
             </div>
         </div>
+        <h4>MY SCREENS</h4>
+        <section class="ScreenBoard">
+            <div class="Screen" onclick="PickScreen('0')"><img id="Scimg0"></div>
+            <div class="Screen" onclick="PickScreen('1')"><img id="Scimg1"></div>
+            <div class="Screen" onclick="PickScreen('2')"><img id="Scimg2"></div>
+            <div class="Screen" onclick="PickScreen('3')"><img id="Scimg3"></div>
+            <div class="Screen" onclick="PickScreen('4')"><img id="Scimg4"></div>
+            <div class="Screen" onclick="PickScreen('5')"><img id="Scimg5"></div>
+            <div class="Screen" onclick="PickScreen('6')"><img id="Scimg6"></div>
+            <div class="Screen" onclick="PickScreen('7')"><img id="Scimg7"></div>
+        </section>
+        <div id="ScreenSetModal" class="modal">
+            <div class="modal-content">
+               <!--<span class="close">&times;</span>--> 
+                <span class="ScreenCard">
+                    <form id="myForm"  onsubmit="return false">
+                        <select id="selectNumber">
+                          <option>Choose Title</option>
+                        </select>
+                        <button class="submit" onclick="scrPick();">Confirm</button>
+                      </form>
+                </span>
+            </div>
+        </div>
     </div>
     <script src="CHscript.js"></script>
 </body>

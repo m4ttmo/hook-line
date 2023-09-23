@@ -14,7 +14,7 @@ header{
 }
 
 .WeeklyMovies{
-    border: 2px solid red;
+  
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -26,25 +26,25 @@ header{
 .movieOption{
     height: 280px;
     width: 189px;
-    border: 1px solid blue;
+    
     object-fit: cover;
 }
 
 #poster{
     height: 400px;
     width: 270px;
-    border: 1px solid blue;
+    
     object-fit: cover;
 }
 #synop{
     height: 400px;
     width: 270px;
-    border: 1px solid blue;
+    
 }
 #cast{
     height: 400px;
     width: 270px;
-    border: 1px solid blue;
+    
 }
 
 .modal {
@@ -90,4 +90,16 @@ img{
  height: 100%;
  width: 100%;
  object-fit: cover;
+}
+.ScreenBoard{
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    width: 90%;
+    margin: auto;
+}
+.Screen{
+    width: 100px;
+    height: 148px;
+    background-color: beige;
 }
