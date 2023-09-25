@@ -3,23 +3,25 @@ var screenMod = document.getElementById("ScreenSetModal");
 var btn = document.getElementsByClassName("movieOption");
 var span = document.getElementsByClassName("close")[0];
 var MovID = [
-  "tt1517268",
-  "tt15398776",
-  "tt10160976",
-  "tt13957560",
-  "tt3291150",
+  { id: "tt1517268", cost: 500000 },
+  { id: "tt15398776", cost: 500000 },
+  { id: "tt10160976", cost: 500000 },
+  { id: "tt13957560", cost: 500000 },
+  { id: "tt3291150", cost: 500000 },
 ];
 var Mov = [];
-//var titleOpt = [];
 var scrNum;
 var scrOpt = [];
 var MyCinLineUp = [];
 var budget = 1000000;
+var displayBudget = document.getElementById("budget");
 
 window.onload = function FilmLoad() {
+  displayBudget.innerHTML = budget;
   for (let i = 0; i <= MovID.length; i++) {
     console.log(i);
-    fetch("https://www.omdbapi.com/?i=" + MovID[i] + "&apikey=991caacb")
+    //console.log(MovID[i].id);
+    fetch("https://www.omdbapi.com/?i=" + MovID[i].id + "&apikey=991caacb")
       .then((response) => response.json())
       .then((data) => {
         x = data.Title;
@@ -65,7 +67,6 @@ var select = document.getElementById("selectNumber");
 function movieSelect(x) {
   select.innerHTML = "";
   for (var i = 0; i < Mov.length; i++) {
-    //titleOpt[i] = Mov[i];
     select.innerHTML +=
       "<option value=" + Mov[i].imdbID + ">" + Mov[i].Title + "</option>";
   }
