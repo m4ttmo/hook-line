@@ -24,15 +24,16 @@ header{
     
 }
 .movieOption{
-    height: 280px;
+    /*height: 280px;*/
     width: 189px;
+    aspect-ratio:27/40;
     object-fit: cover;
 }
 
 #poster{
-    height: 400px;
+    /*height: 400px;*/
     width: 270px;
-    
+    aspect-ratio:27/40;
     object-fit: cover;
 }
 #synop{
@@ -89,6 +90,7 @@ img{
  height: 100%;
  width: 100%;
  object-fit: cover;
+ aspect-ratio:27/40;
 }
 .ScreenBoard{
     display: flex;
